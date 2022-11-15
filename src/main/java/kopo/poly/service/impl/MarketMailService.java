@@ -15,12 +15,9 @@ import java.util.Properties;
 @Service("MarketMailService")
 public class MarketMailService implements IMarketMailService {
 
-    final String host ="smtp.gmail.com";
 
-    final String user ="floramiss0700@gmail.com";
 
-    final String password ="fvfzrvayfawppktv";
-
+    //사업자 회원가입 이메일 발송서비스
     @Override
     public int doSendmail(MailDTO mDTO) throws Exception {
         int res = 1;
