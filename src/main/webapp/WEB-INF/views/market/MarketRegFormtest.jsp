@@ -39,8 +39,6 @@
         }
 
     <!-- 사용자 입력 확인 -->
-
-
         function Checkfield(f) {
             if (f.marketId.value == "") {
                 alert("아이디를 입력하세요");
@@ -84,10 +82,6 @@
             }
         }
 
-        // if (randomPin !== $("#auth_email").val()) {
-        //     alert("잘못된 인증번호입니다.");
-        //     return false;
-        // }
     </script>
 
     <!--이메일 인증 전송-->
@@ -759,7 +753,7 @@
                         <div class="tab-content" id="pills-tabContent2">
                             <div class="tab-pane fade show active" id="pills-ome2" role="tabpanel"
                                  aria-labelledby="pills-home-tab2">
-                                <form action="insertMarketInfo" method="post">
+                                <form  name="f" action="/market/insertMarketInfo" onsubmit="return Checkfield(this);" method="post">
                                     <div class="form-group input-group">
                                         <input type="text" class="form-control" name="marketId" id="marketId"
                                                placeholder="아이디">
@@ -807,42 +801,42 @@
                                         <input type="text" class="form-control" name="addr2" id="addr2"
                                                placeholder="상세주소">
                                     </div>
-                                    <button type="submit" class="btn btn-log btn-block btn-thm">회원가입</button>
+                                    <div><input type="submit" value="회원가입" class="btn btn-log btn-block btn-thm"/></div>
                                 </form>
                             </div>
-                            <div class="tab-pane fade" id="pills-profile2" role="tabpanel"
-                                 aria-labelledby="pills-profile-tab2">
-                                <form action="#">
-                                    <div class="form-group input-group">
-                                        <input type="email" class="form-control" id="exampleInputEmail5"
-                                               placeholder="Email">
-                                    </div>
-                                    <div class="form-group input-group">
-                                        <input type="text" class="form-control" id="exampleInputName3"
-                                               placeholder="Username">
-                                    </div>
-                                    <div class="form-group input-group mb20">
-                                        <input type="password" class="form-control" id="exampleInputPassword5"
-                                               placeholder="Password">
-                                    </div>
-                                    <button type="submit" id=btn_reg class="btn btn-log btn-block btn-thm"
-                                            onclick="Checkfield(this.form)">회원가입
-                                    </button>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <button type="submit" class="btn btn-block btn-fb"><i
-                                                    class="fa fa-facebook float-left mt5"></i> Log In via Facebook
-                                            </button>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <button type="submit" class="btn btn-block btn-googl"><i
-                                                    class="fa fa-google float-left mt5"></i> Log In via Google+
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+<%--                            <div class="tab-pane fade" id="pills-profile2" role="tabpanel"--%>
+<%--                                 aria-labelledby="pills-profile-tab2">--%>
+<%--                                <form action="#">--%>
+<%--                                    <div class="form-group input-group">--%>
+<%--                                        <input type="email" class="form-control" id="exampleInputEmail5"--%>
+<%--                                               placeholder="Email">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="form-group input-group">--%>
+<%--                                        <input type="text" class="form-control" id="exampleInputName3"--%>
+<%--                                               placeholder="Username">--%>
+<%--                                    </div>--%>
+<%--                                    <div class="form-group input-group mb20">--%>
+<%--                                        <input type="password" class="form-control" id="exampleInputPassword5"--%>
+<%--                                               placeholder="Password">--%>
+<%--                                    </div>--%>
+<%--                                    <button type="submit" id=btn_reg class="btn btn-log btn-block btn-thm"--%>
+<%--                                            onclick="Checkfield(this.form)">회원가입--%>
+<%--                                    </button>--%>
+<%--                                    <hr>--%>
+<%--                                    <div class="row">--%>
+<%--                                        <div class="col-lg-6">--%>
+<%--                                            <button type="submit" class="btn btn-block btn-fb"><i--%>
+<%--                                                    class="fa fa-facebook float-left mt5"></i> Log In via Facebook--%>
+<%--                                            </button>--%>
+<%--                                        </div>--%>
+<%--                                        <div class="col-lg-6">--%>
+<%--                                            <button type="submit" class="btn btn-block btn-googl"><i--%>
+<%--                                                    class="fa fa-google float-left mt5"></i> Log In via Google+--%>
+<%--                                            </button>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </form>--%>
+<%--                            </div>--%>
                         </div>
                     </div>
                 </div>
